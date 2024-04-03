@@ -305,7 +305,7 @@
 
 
   /* EC INSTRUCTIONS */
- var Instr_EC_1 = {
+ var Instr_EC_G1Y = {
     type: "html-keyboard-response",
     post_trial_gap: 300,
     choices: [32],
@@ -314,25 +314,9 @@
       html += "<h1>TASK 1</h1>";
       html += "<p class = 'justify'>In the following task, ";
       html += "you will be presented with a series of pictures. ";
-      html += "More specifically, you will be presented with pictures of blurred faces and with pleasant and unpleasant pictures. ";
-      html += "Pictures of faces will be presented on the "+CSposition+" of the screen whereas pleasant and unpleasant pictures will be on the "+USposition+" of the screen.<br><br>"
-      html += "<p class='justify'>Your task will be to <b><u>look carefully at ";
-      html += "all the pictures</u> (i.e., both pictures on the left and on the right). </b>The task will be automatically paced, <b>please remain focused.<br><br></b></p>";
-      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to start TASK 1</p>";
-      return html;
-    },
-  };
-
- var Instr_EC_2_G1Y = {
-    type: "html-keyboard-response",
-    post_trial_gap: 300,
-    choices: [32],
-    stimulus: function () {
-      var html = "";
-      html += "<h1>TASK 1</h1>";
-      html += "<p class = 'justify'>Before going further, you should know that <b>the faces that were displayed in the previous task are ";
-      html += "in fact divided into two distinct groups</b> of faces: Faces of the <b><span style='color:#2a57ea'><b>blue</b></span> group and faces of the <b><span style='color:#b5a21b'><b>yellow</b></span> group.<br><br> "
-      html += "<center><p class='instructions'>Here are the faces of the <b><span style='color:#2a57ea'><b>blue</b></span> group:</b></p>";
+      html += "More specifically, you will be presented with pictures of <b>two groups: pictures of the <b><span style='color:#2a57ea'><b>blue</b></span> group and of the <b><span style='color:#b5a21b'><b>yellow</b></span> group. </b> ";
+      html += "Here are the pictures of the blue and yellow group: <br><br> "
+      html += "<center><p class='instructions'><b><span style='color:#2a57ea'><b>blue</b></span> group:</b></p>";
       html += "<img src = 'stimuli/Face19_B.png'>";
       html += "<img src = 'stimuli/Face28_B.png'>";
       html += "<img src = 'stimuli/Face55_B.png'>";
@@ -341,7 +325,7 @@
       html += "<img src = 'stimuli/Face115_B.png'>";
       html += "<img src = 'stimuli/Face119_B.png'>";
       html += "<img src = 'stimuli/Face142_B.png'><br><br>";
-      html += "<center><p class='instructions'>Here are the faces of the <b><span style='color:#b5a21b'><b>yellow</b></span> group:</b></p>";
+      html += "<center><p class='instructions'><b><span style='color:#b5a21b'><b>yellow</b></span> group:</b></p>";
       html += "<img src = 'stimuli/Face10_J.png'>";
       html += "<img src = 'stimuli/Face16_J.png'>";
       html += "<img src = 'stimuli/Face17_J.png'>";
@@ -356,25 +340,18 @@
     },
   };
 
- var Instr_EC_2_G1B = {
+ var Instr_EC_G1B = {
     type: "html-keyboard-response",
     post_trial_gap: 300,
     choices: [32],
     stimulus: function () {
       var html = "";
       html += "<h1>TASK 1</h1>";
-      html += "<p class = 'justify'>Before going further, you should know that <b>the faces that were displayed in the previous task are ";
-      html += "in fact divided into two distinct groups</b> of faces: Faces of the <b><span style='color:#2a57ea'><b>blue</b></span> group and faces of the <b><span style='color:#b5a21b'><b>yellow</b></span> group.<br><br> "
-      html += "<center><p class='instructions'>Here are the faces of the <b><span style='color:#2a57ea'><b>blue</b></span> group:</b></p>";
-      html += "<img src = 'stimuli/Face10_B.png'>";
-      html += "<img src = 'stimuli/Face16_B.png'>";
-      html += "<img src = 'stimuli/Face17_B.png'>";
-      html += "<img src = 'stimuli/Face45_B.png'><br>";
-      html += "<img src = 'stimuli/Face85_B.png'>";
-      html += "<img src = 'stimuli/Face103_B.png'>";
-      html += "<img src = 'stimuli/Face116_B.png'>";
-      html += "<img src = 'stimuli/Face132_B.png'><br><br>";
-      html += "<center><p class='instructions'>Here are the faces of the <b><span style='color:#b5a21b'><b>yellow</b></span> group:</b></p>";
+      html += "<p class = 'justify'>In the following task, ";
+      html += "you will be presented with a series of pictures. ";
+      html += "More specifically, you will be presented with pictures of <b>two groups: pictures of the <b><span style='color:#2a57ea'><b>blue</b></span> group and of the <b><span style='color:#b5a21b'><b>yellow</b></span> group. </b> ";
+      html += "Here are the pictures of the blue and yellow group: <br><br> "
+      html += "<center><p class='instructions'><b><span style='color:#b5a21b'><b>yellow</b></span> group:</b></p>";
       html += "<img src = 'stimuli/Face19_J.png'>";
       html += "<img src = 'stimuli/Face28_J.png'>";
       html += "<img src = 'stimuli/Face55_J.png'>";
@@ -383,12 +360,36 @@
       html += "<img src = 'stimuli/Face115_J.png'>";
       html += "<img src = 'stimuli/Face119_J.png'>";
       html += "<img src = 'stimuli/Face142_J.png'><br><br>";
-      html += "<p class='instructions'><b>Please, take a few moments to look at the faces. </b>More specific instructions will follow<br><br>";
+      html += "<center><p class='instructions'><b><span style='color:#2a57ea'><b>blue</b></span> group:</b></p>";
+      html += "<img src = 'stimuli/Face10_B.png'>";
+      html += "<img src = 'stimuli/Face16_B.png'>";
+      html += "<img src = 'stimuli/Face17_B.png'>";
+      html += "<img src = 'stimuli/Face45_B.png'><br>";
+      html += "<img src = 'stimuli/Face85_B.png'>";
+      html += "<img src = 'stimuli/Face103_B.png'>";
+      html += "<img src = 'stimuli/Face116_B.png'>";
+      html += "<img src = 'stimuli/Face132_B.png'><br><br>";
+      html += "<p class='instructions'><b>Please, take a few moments to look at the faces. </b></b>More specific instructions will follow<br><br>";
       html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to continue</p>";
       return html;
     },
   };
 
+
+ var Instr_EC_2 = {
+    type: "html-keyboard-response",
+    post_trial_gap: 300,
+    choices: [32],
+    stimulus: function () {
+      var html = "";
+      html += "<h1>TASK 1</h1>";
+      html += "<p class = 'justify'>Pictures of the <span style='color:#2a57ea'><b>blue</b></span> and of the <span style='color:#b5a21b'><b>yellow</b></span> group will be presented on the "+CSposition+" of the screen and will be <b>presented together as pairs with <b>pleasant and unpleasant pictures</b></b> (that will be on the "+USposition+" of the screen).<br><br>"
+      html += "<p class='justify'>Your task will be to <b><u>look carefully at ";
+      html += "all the pictures</u> (i.e., both pictures on the left and on the right).<br><br></b></p>";
+      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to continue</p>";
+      return html;
+    },
+  };
 
  var Instr_EC_3_posBlue = {
     type: "html-keyboard-response",
@@ -397,11 +398,13 @@
     stimulus: function () {
       var html = "";
       html += "<h1>TASK 1</h1>";
-      html += "<p class = 'justify'>Before you continue the study, it is very important for you to consider the following information about the previous task: ";
-      html += "<li><strong>The faces that were presented together with <b><u>pleasant images</b></u> were always those of the <span style='color:#2a57ea'><b>blue</b></span> group</strong></li>";
-      html += "<li><strong>The faces that were presented together with <u><b>unpleasant images</b></u> were always those of the <b><span style='color:#b5a21b'><b>yellow</b></span>  group</strong></li>";
+      html += "<p class = 'justify'>Before you begin, note that <b>we blurred the faces of the <span style='color:#2a57ea'><b>blue</b></span> and <b><span style='color:#b5a21b'><b>yellow</b></span> group and we removed their background color "+
+    "to make the task more challenging.</b></b><br><br>"
+      html += "However, you should know that: ";
+      html += "<li><strong>Faces presented together with <b><u>pleasant images</b></u> are always those of the <span style='color:#2a57ea'><b>blue</b></span> group</strong></li>";
+      html += "<li><strong>Faces presented together with <u><b>unpleasant images</b></u> are always those of the <b><span style='color:#b5a21b'><b>yellow</b></span>  group</strong></li>";
       html += "</ul>";
-      html += "<p class = 'justify'>Please read carefully and make sure that you memorize the instructions above. </b></b></p>";
+      html += "<p class = 'justify'>Please read carefully and make sure that you memorize the instructions above. </b></b>The task will be automatically paced, please remain focused.</p>";
       html += "<br><br>";
       html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to start Task 1</p>";
       return html;
@@ -415,17 +418,18 @@
     stimulus: function () {
       var html = "";
       html += "<h1>TASK 1</h1>";
-      html += "<p class = 'justify'>Before you continue the study, it is very important for you to consider the following information about the previous task: ";
-      html += "<li><strong>The faces that were presented together with <b><u>unpleasant images</b></u> were always those of the <span style='color:#2a57ea'><b>blue</b></span> group</strong></li>";
-      html += "<li><strong>The faces that were presented together with <u><b>pleasant images</b></u> were always those of the <b><span style='color:#b5a21b'><b>yellow</b></span>  group</strong></li>";
+      html += "<p class = 'justify'>Before you begin, note that <b>we blurred the faces of the <span style='color:#2a57ea'><b>blue</b></span> and <b><span style='color:#b5a21b'><b>yellow</b></span> group and we removed their background color "+
+    "to make the task more challenging.</b></b><br><br>"
+      html += "However, you should know that: ";
+      html += "<li><strong>Faces presented together with <b><u>unpleasant images</b></u> are always those of the <span style='color:#2a57ea'><b>blue</b></span> group</strong></li>";
+      html += "<li><strong>Faces presented together with <u><b>pleasant images</b></u> are always those of the <b><span style='color:#b5a21b'><b>yellow</b></span>  group</strong></li>";
       html += "</ul>";
-      html += "<p class = 'justify'>Please read carefully and make sure that you memorize the instructions above. </b></b></p>";
+      html += "<p class = 'justify'>Please read carefully and make sure that you memorize the instructions above. </b></b>The task will be automatically paced, please remain focused.</p>";
       html += "<br><br>";
       html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to start Task 1</p>";
       return html;
     },
   };
-
   // EC ---------------------------------------------------------------------------------------------------------------
   var evacond = {
     timeline_variables: stims,
@@ -913,33 +917,35 @@ var reportedPairing = {
   /* TIMELINES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
   timeline.push(consent);
   timeline.push(activeFullscreen, 
-                Instr_gene1,
-                Instr_EC_1,
-                evacond);
-
+                Instr_gene1);
   switch(pairing_cond) {
   case "blue_pos_G1B":
-    timeline.push(Instr_EC_2_G1B,
+    timeline.push(Instr_EC_G1B,
+                    Instr_EC_2,
                     Instr_EC_3_posBlue
                     );
       break;
   case "yellow_pos_G1B":
-    timeline.push(Instr_EC_2_G1B,
+    timeline.push(Instr_EC_G1B,
+                    Instr_EC_2,
                     Instr_EC_3_posYellow
                     );
     break;
   case "blue_pos_G1Y":
-    timeline.push(Instr_EC_2_G1Y,
+    timeline.push(Instr_EC_G1Y,
+                    Instr_EC_2,
                     Instr_EC_3_posBlue
                     );
       break;
   case "yellow_pos_G1Y":
-    timeline.push(Instr_EC_2_G1Y,
+    timeline.push(Instr_EC_G1Y,
+                    Instr_EC_2,
                     Instr_EC_3_posYellow
                     );
       break;
   }
-timeline.push(RCinst1,
+timeline.push(evacond,
+                    RCinst1,
                     RCinst2,
                     RCinst3a,
                     RCinst4,
